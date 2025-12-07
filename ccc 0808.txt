@@ -9,9 +9,6 @@ using namespace std;
 
 string currentUser;
 string currentRole;
-
-// ---------------------- LOGIN ----------------------
-
 bool login() {
     string u, p, r;
     string inUser, inPass;
@@ -37,8 +34,6 @@ bool login() {
     return false;
 }
 
-// ---------------------- ADD STUDENT ----------------------
-
 void addStudent() {
     int roll;
     string name;
@@ -57,8 +52,6 @@ void addStudent() {
 
     cout << "Student added!\n";
 }
-
-// ---------------------- DISPLAY STUDENTS ----------------------
 
 void displayStudents() {
     ifstream file(STUD_FILE);
@@ -81,8 +74,6 @@ void displayStudents() {
         cout << roll << "\t" << name << "\t" << mark << "\n";
     }
 }
-
-// ---------------------- SEARCH STUDENT ----------------------
 
 void searchStudent() {
     int findRoll;
@@ -108,8 +99,6 @@ void searchStudent() {
 
     cout << "Student not found!\n";
 }
-
-// ---------------------- DELETE STUDENT ----------------------
 
 void deleteStudent() {
     int delRoll;
@@ -145,7 +134,6 @@ void deleteStudent() {
     else cout << "Roll not found!\n";
 }
 
-// ---------------------- UPDATE STUDENT ----------------------
 
 void updateStudent() {
     int updateRoll;
@@ -189,7 +177,7 @@ void updateStudent() {
     else cout << "Roll not found!\n";
 }
 
-// ---------------------- MENUS ----------------------
+
 
 void adminMenu() {
     int c;
@@ -235,7 +223,6 @@ void guestMenu() {
     }
 }
 
-// ---------------------- MAIN ----------------------
 
 int main() {
     if (!login()) {
@@ -250,4 +237,5 @@ int main() {
     else guestMenu();
 
     return 0;
+
 }
